@@ -24,3 +24,8 @@ $.fn.isOnScreen = function(o){
 	return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 	
 };
+
+
+$(document).ready(function() {
+   $("section").addClass(".active")
+});

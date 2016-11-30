@@ -1,0 +1,1153 @@
+    /* MASTER STYLESHEET:  ATM prototype maintheme */
+
+
+/*    
+                       _         
+     _________  ____  (_)_______ 
+    / ___/ __ \/ __ \/ / ___/ _ \
+ _ (__  ) /_/ / / / / / /__/  __/
+(_)____/\____/_/ /_/_/\___/\___*/
+
+
+                                 
+/* 
+Project folder: fusaro-ATM.hi-fi proto V9
+
+Version:        9.0
+
+Last mod:       23/03/2016
+
+Author:         Gianmarco Fusaro
+
+Notes: 
+line 374 
+line 776 
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+h1 {
+    display: block;
+    font-size: 1.3em;
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid;
+    margin: 0 2%;
+    padding: 1em;
+}
+
+a {
+    color: black;
+}
+
+/* MAIN NAV */
+
+nav {
+    display: inline-block;
+    width: 100%;
+}
+
+nav ul {
+    display: inline-block;
+    padding: 0;
+}
+
+nav ul li {
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid orange;
+}
+
+.logo:hover {
+    border-bottom: 3px solid white;
+}
+
+nav ul:last-child {
+    float: right;
+}
+
+nav ul:last-child li {
+    background: orange;
+}
+
+nav ul:last-child li a {
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 auto;
+    align-content: center;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.logo img {
+    vertical-align: middle;
+}
+
+#breadcrumb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.7em;
+}
+
+#breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* LAYOUTS */
+
+.art-wrapper-x {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.x-alt{
+    align-items: center;
+    margin:-50px 0;
+}
+
+.art-wrapper-x2 {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    margin-top: 50px;
+}
+
+
+/* credit card  page layout*/
+
+.triple {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.radio {
+    width: 150px;
+    margin-left: 0;
+    margin-right: 5%;
+    padding: 0;
+}
+
+.nob {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.resume {
+    display: block;
+    max-width: 300px;
+    border: 1px solid grey;
+    margin-top: 22px;
+    margin-right: 0;
+    padding: 20px;
+}
+
+.triple p:first-child {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    color: grey;
+}
+
+.triple p + p {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 10px;
+    vertical-align: super;
+}
+
+.cta {
+    display: flex;
+    max-width: 300px;
+    min-width: 30%;
+    height: 80px;
+    outline: 3px solid orange;
+    transition: all .2s ease-in-out;
+}
+
+.cta:hover {
+   transition: all .2s ease-in-out;
+    background-color: orange;
+    color: white;
+}
+
+.cta a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: orange;
+}
+
+.cta:hover a {
+    color: white;
+}
+
+
+.cta a:active {
+    outline: 4px solid orange;
+}
+
+.inverse,
+.inverse a {
+    background: orange;
+    color: white;
+}
+
+.news {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid red;
+}
+
+.news-label {
+    display: inline-block;
+    min-width: 25%;
+    text-align: center;
+    line-height: 40px;
+    background: black;
+    color: white;
+}
+
+section {
+    width: 300px;
+}
+
+.double {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.double + .double {
+    height: 325px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid grey;
+}
+
+.selector-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.selector {
+    display: flex;
+    height: 65px;
+    width: 65px;
+    border: 2px solid orange;
+}
+
+.selector {
+    display: table;
+    width: 70px;
+    height: 60px;
+    border: 2px solid orange;
+    text-align: center;
+    line-height: 60px;
+    color: orange;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.selector:hover {
+    background: orange;
+    transition: all .2s ease-in-out;
+}
+
+.selector:hover span{
+   color: white;
+}
+
+.selector:active {
+    transition: all 1s ease;
+    outline: 4px solid orange;
+}
+
+.selector-alt span {
+    line-height: 65px;
+}
+
+.selector span,
+.selector-alt span {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.warning {
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    color: grey;
+}
+
+p.warning a:last-child {
+    text-decoration: underline;
+    color: orange;
+    letter-spacing: 1px;
+}
+
+
+/*ticket stuff*/
+
+#ticket img {
+    max-width: 300px;
+    margin-top: -2px;
+}
+
+#ticket span {
+    display: block;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 2em;
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.2);
+    border: 4px solid white;
+    color: white;
+    margin: -130px 60px;
+    box-shadow: 0 0 0 2px orange;
+}
+
+.feedback {
+    margin-left: -20px;
+    animation-name: feedback;
+    animation-duration: 4000ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    
+    
+        opacity: 0;
+}
+
+@keyframes feedback {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#ticket span div {
+    opacity: 0;
+    position: absolute;
+    background: orange;
+    width: 200px;
+    padding: 20px;
+    margin-top: -2.5em;
+    transition: opacity 0.3s ease-in;
+    font-size: 0.5em;
+}
+
+
+/* fix the info, show a bigger qr code */
+
+#ticket span div:hover {
+    font-size: 0.5em;
+    opacity: 1;
+}
+
+
+/* ANIMATION ------------------ask prof */
+
+.feedback div:first-child {
+    display: block;
+    position: absolute;
+    margin-left: 3em;
+    padding: 0 0.5em;
+    font-size: 0.7em;
+    background: white;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.feedback div+div {
+    display: block;
+    position: absolute;
+    width: 0.7em;
+    height: 0.7em;
+    margin: -0.3em 3em;
+    transform: rotate(45deg);
+    border-left: 1px solid orange;
+    border-top: 1px solid orange;
+    background: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: block;
+    background: url(../assets/incline-background.svg);
+    background-repeat: repeat;
+    background-color: #e3e5e8;
+    padding-top: 50px;
+}
+
+#footer-nav ul {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#footer-nav ul li {
+    display: inline-block;
+    width: 100px;
+    margin: 0 auto;
+    border: 0;
+    font-size: 1.2em;
+}
+
+#footer-nav ul li:hover {
+    text-decoration: underline;
+}
+
+#footer-nav ul li a {
+    font-size: 0.65em;
+}
+
+#footer-nav ul {
+    float: none;
+}
+
+#footer-nav ul:last-child li,
+#footer-nav ul:last-child li a {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+.logo-bw img {
+    display: block;
+    width: 110px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: #2d2d2d;
+    border-bottom: 4px solid orange;
+    font-size: 0.7em;
+}
+
+.copyright a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.copyright span {
+    padding: 10px;
+    color: white;
+}
+
+.double p:first-child {
+    display: inline-block;
+    font-size: 3em;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    color: grey;
+}
+
+.double p + p {
+    display: inline-block;
+    font-size: 1em;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+#price {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.special {
+    background: yellowgreen;
+    outline: 0;
+    color: white;
+    outline: 2px solid yellowgreen !important;
+}
+
+.special a {
+    color: white;
+}
+
+.special:hover {
+    background: green;
+}
+
+.special a:active {
+    outline: 3px solid yellowgreen;
+}
+
+.cta2 {
+    display: inline-block;
+    width: 49.3%;
+    text-align: center;
+    border-bottom: 2px solid orange;
+}
+
+.cta2 +.cta2 {
+    border-bottom: 0px solid orange;
+}
+
+.cta2 a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.form {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+ul.form li input {
+    display: inline-block;
+    padding-left: 40px;
+    font-size: 0.8em;
+    width: 100%;
+    height: 3em;
+    border: 0;
+}
+
+ul.form li {
+    border-bottom: 1px solid grey;
+}
+
+.form img {
+    display: block;
+    position: absolute;
+    margin-top: 16px;
+    width: 25px;
+}
+
+.block:last-child {
+    margin-top: 43px;
+}
+
+
+/* validator cta - the big green round button */
+
+#validator {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 9em;
+    height: 9em;
+    background: yellowgreen;
+    border-radius: 9em;
+    overflow: hidden;
+}
+
+#validator span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 9em;
+    height: 9em;
+    border-radius: 9em;
+    transform-origin: 50% 50%;
+}
+
+#validator img {
+    margin: 1em auto;
+    transform: rotate(90deg);
+    width: 60px;
+}
+
+#validator:active {
+    box-shadow: 0 0 0 2px yellowgreen;
+}
+
+#validator:hover span {
+    animation-name: validator-1;
+    animation-timing-function: ease-in;
+    animation-duration: 3400ms;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+}
+
+/* @keyframes validator {
+    0% {
+        margin-top: 0;
+    }
+    33% {
+        margin-top: 0;
+        transform: rotate(-90deg);
+    }
+    50% {
+        margin-top: 0;
+        transform: rotate(-90deg);
+    }
+    100% {
+        margin-top: -400px;
+        transform: rotate(-90deg);
+    }
+}*/ /* OLD ANIMATION KILL*/
+
+
+@keyframes validator-1 {
+    0% {
+        margin-top: 0;
+    }
+    16% {
+        margin-top: 0;
+        transform: rotate(-90deg);
+    }
+    25% {
+        margin-top: 0;
+        transform: rotate(-90deg);
+    }
+    50% {
+        margin-top: -400px;
+        transform: rotate(-90deg);
+    }
+    50.000001% {
+        margin-top: 400px;
+        transform: rotate(-90deg);
+    }
+    75% {
+        margin-top: 0px;
+        transform: rotate(-90deg);
+    }
+    85% {
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+    100% {
+        margin-top: 0px;
+        transform: rotate(0deg);
+    }
+}
+
+
+/*hidden elements on desktop*/
+
+.hamb {
+    display: none;
+}
+
+.icon {
+    display: none;
+}
+
+.notification {
+    display: none;
+}
+
+
+/* radio button style */
+
+input[type=checkbox],
+input[type=radio] {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+}
+
+input[type=checkbox] + label,
+input[type=radio]+ label {
+    display: block;
+    margin-top: -20px;
+    line-height: 2em;
+    font-size: 0.8em;
+    max-width: 180px;
+}
+
+input[type=checkbox]+label > span,
+input[type=radio]+ label > span {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1.25em 0.5em 0.25em 0.25em;
+    border: 2px solid orange;
+    border-radius: 2em;
+    background: white;
+    vertical-align: bottom;
+}
+
+input[type=checkbox]:checked + label > span {
+    display: block;
+    font-size: 0.875em;
+    line-height: 1em;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+}
+
+input[type=radio]:checked + label > span > span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 0.1em 0.1em;
+    border-radius: 1em;
+    border: 1px solid white;
+    background: orange;
+}
+
+
+/* cc form style */
+
+.cc {
+    display: block;
+    font-size: 1em;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 3em;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid orange;
+    padding-left: 1em;
+}
+
+input:focus {
+    outline-color: orange;
+}
+
+label[for=name],
+label[for=surname],
+label[for=expiry],
+label[for=cvv] {
+    display: block;
+    border-bottom: 1px solid grey;
+}
+
+label {
+    width: 100% !important;
+}
+
+#expiry {
+    padding-right: 90px;
+}
+
+#month,
+#year {
+    display: inline-block;
+    width: 49%;
+}
+
+#year {
+    float: right;
+}
+
+#cvv {
+    padding-right: 150px;
+}
+
+.infopoint {
+    position: absolute;
+    text-align: center;
+    line-height: 1.8em;
+    height: 2em;
+    width: 2em;
+    margin-top: -2.65em;
+    margin-left: 10em;
+    border: 2px solid grey;
+}
+
+.infopoint div {
+    opacity: 0;
+    position: absolute;
+    background: orange;
+    padding: 40px;
+    transition: opacity 0.3s ease-in;
+}
+
+.infopoint:hover div {
+    opacity: 1;
+}
+
+.infopoint:active {
+    outline: 1px solid grey;
+}
+
+input[type=reset] {
+    display: block;
+    margin: 2em 0;
+    height: 3em;
+    border: 0;
+    background: orange;
+    color: white;
+    box-shadow: 0 0 0 0 white;
+    outline:0;
+    cursor:pointer;
+}
+
+
+/* ask prof for box-shadow  HOW TO KILL USER AGENT PRESET */
+
+progress[value] {
+    display: block;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    margin-top: -25px;
+    border: 1px solid white;
+}
+
+progress[value]::-webkit-progress-value {
+    background: orange;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+progress::-webkit-progress-bar {
+    background: lightgrey;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#price span {
+    display: block;
+    padding: 0;
+    font-size: 0.5em;
+    margin-top: -5px;
+}
+
+span #price {
+    padding: 20px;
+}
+
+.qr {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: -2em;
+    padding: 0;
+}
+
+.hidden-dsk,
+.hidden-dsk-h1 {
+    display: none;
+}
+
+.hidden-mob {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 450px;
+    width: 100%;
+}
+
+.hidden-mob img {
+    display: flex;
+    padding: 4em;
+}
+
+/* TEST LINE  BELOW */
+
+
+
+
+/* TEST LINE  END */
+
+
+/* ----------------------MEDIA QUERY MOBILE---------------------*/
+
+@media (max-width:800px) {
+    .hidden-dsk {
+        display: block;
+    }
+    .hidden-mob,
+    .hidden-mob-h1 {
+        display: none;
+    }
+    article {
+        margin: 0 auto;
+    }
+    .wrapper {
+        min-height: 568px;
+        max-height: 627px;
+        margin: 0 auto;
+    }
+    .art-wrapper-x {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 300px;
+        margin: 0 auto;
+        justify-content: space-around;
+        padding-top: 20px;
+        height: 450px;
+    }
+    /*.art-wrapper {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+max-width: 300px;
+margin: 0 auto;
+justify-content: space-around;
+padding-top: 20px;
+height:450px;
+}*/
+    /*to kill */
+    .art-wrapper-x3 {
+        display: block;
+        justify-content: space-between;
+        align-content: center;
+        min-height: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        height: 450px;
+    }
+    .cta {
+        display: flex;
+        flex-flow: row wrap;
+        min-width: 100%;
+        width: 300px;
+        height: 80px;
+        outline: 2px solid orange;
+    }
+    #warning {
+        display: block;
+        height: 50px;
+        margin-top: 50px;
+    }
+    .double p:first-child {
+        display: none
+    }
+    .double p + p {
+        display: none
+    }
+    .double:last-child {
+        border: 0px solid grey;
+    }
+    .double .nob {
+        border-top: 0px solid white !important;
+    }
+    .art-wrapper-x2 {
+        display: flex;
+        flex-flow: row wrap;
+        min-height: 400px;
+        justify-content: space-between;
+        margin: 50px auto;
+        width: 300px;
+    }
+    .triple {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .nob {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cc {
+        margin: 3em 0;
+    }
+    .radio {
+        margin: 0 auto;
+        display: block;
+        margin-top: -40px;
+    }
+    .resume {
+        max-height: 275px;
+        border: 1px solid grey;
+        margin-top: 22px;
+        padding: 20px;
+    }
+    .triple p:first-child {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.7em;
+        padding: 0;
+        margin-top: 0;
+        text-align: center;
+        color: grey;
+    }
+    .triple p + p {
+        display: inline-block;
+        font-size: 0.8em;
+        padding: 0;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    .feedback {
+        display: none;
+    }
+    .block:first-child {
+        margin-top: -43px;
+    }
+    .block:last-child {
+        margin-top: 43px;
+    }
+    .notification {
+        display: block;
+        position: fixed;
+        width: 1.1em;
+        height: 1.1em;
+        border-radius: 1.1em;
+        background: orange;
+        text-align: center;
+        line-height: 1.2em;
+        color: white;
+        font-size: 1em;
+        margin: -3.43em 2em;
+    }
+    /* --------------fixed elements---------------dont add below */
+    .hamb {
+        display: block;
+        float: right;
+    }
+    .hamb img {
+        width: 60%;
+        height: 60%;
+        margin-top: 4px;
+    }
+    li .icon {
+        display: block;
+    }
+    .news {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    nav {
+        height: 31.25%;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    nav ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li:first-child {
+        display: block;
+        width: auto;
+        height: 40px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .logo img {
+        height: 20px;
+    }
+    nav ul li {
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        width: 50px;
+    }
+    nav img {
+        height: 30px;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 0.7em;
+    }
+    nav img {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .login {
+        display: none;
+    }
+    #breadcrumb {
+        display: none;
+    }
+    nav ul li:hover {
+        border: 0;
+    }
+    .infoico {
+        display: none;
+    }
+    #price {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        margin-top: -30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .special {
+        width: 100%;
+    }
+    
+      
+  /* TEST LINE  BELOW */
+                              
+    
+    

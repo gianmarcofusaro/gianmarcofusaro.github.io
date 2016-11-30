@@ -252,6 +252,11 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
     .preview_label {
       background: transparent; } }
 
+.main__wrapper {
+  position: absolute;
+  height: 100%;
+  width: auto; }
+
 .main_container {
   display: block;
   position: relative;
@@ -280,12 +285,13 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       margin: 0 70px;
       overflow: hidden;
       transform: translate(0, 4px);
-      transition: all 0.7s ease;
       transform: scale(0.9);
-      transform-origin: 50% 50%; }
+      transform-origin: 50% 50%;
+      backface-visibility: hidden; }
       .main_preview.animation-in {
         transform: scale(1);
-        transform-origin: 50% 50%; } }
+        transform-origin: 50% 50%;
+        transition: all 0.7s ease-in-out; } }
 
 .main_previewAux::before {
   display: none; }
@@ -400,21 +406,22 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   flex-direction: column;
   font-size: 0;
   margin-bottom: 80px;
-  transition: all 0.7s ease 0.2s;
-  opacity: 0.7;
-  transform: translateY(10px) rotateX(8deg);
-  transform-origin: 50% 50%;
-  perspective: 500px; }
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  transform-origin: 50% 50%; }
   .header_prj.animation-in {
     opacity: 1;
-    transform: translateY(0) rotateX(0deg); }
+    transform: translateY(-10%) rotateX(0deg); }
   @media (min-width: 1024px) {
     .header_prj {
       display: flex;
       width: 100%;
       flex-direction: column;
       justify-content: space-between;
-      align-content: center; } }
+      align-content: center; }
+      .header_prj.animation-in {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg); } }
 
 .header_prjAux--left {
   display: flex;
@@ -433,6 +440,13 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       position: relative;
       display: flex;
       align-items: center; } }
+
+.section.active {
+  margin-top: -50%;
+  transition: all 0.7s ease-in-out 0.7s; }
+  @media (min-width: 450px) {
+    .section.active {
+      margin-top: -15%; } }
 
 .header_prjAux--right {
   display: flex;
@@ -770,9 +784,17 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
 .section__splitted {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  .section__splitted img {
-    width: 50%; }
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: all 0.2s ease-in-out;
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    .section__splitted {
+      font-size: 19px; } }
+  @media (min-width: 1024px) {
+    .section__splitted {
+      font-size: 20px; } }
 
 .column {
   width: 50%;
@@ -943,43 +965,39 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   text-align: center; }
   @media (min-width: 768px) {
     .ply__projects_scroll--fix {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
       position: fixed;
       bottom: 0;
       height: 70px;
       width: 100%; } }
 
 .interactionPrompt {
+  position: absolute;
   display: block;
   width: 60px;
   height: 60px;
-  position: absolute;
-  bottom: 30px;
-  left: 8.5%;
-  z-index: 999;
-  cursor: pointer; }
-
-.interactionPrompt--alt {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  bottom: 37%;
-  right: 20px;
   z-index: 999;
   cursor: pointer; }
 
 .arrowCta {
   display: inline-block;
-  height: 12px;
-  width: 12px;
-  transform: scale(0.65) rotate(45deg);
+  height: 20px;
+  width: 20px;
   padding: 10px;
   position: relative;
   overflow: visible;
   cursor: pointer;
   border: transparent;
   background-color: transparent;
-  z-index: 999; }
+  z-index: 999;
+  transform: scale(0.65) rotate(-45deg);
+  transition: all 0.2s ease-in-out; }
+  .arrowCta.active {
+    transform: scale(0.65) rotate(135deg);
+    transition: all 0.2s ease-in-out; }
   .arrowCta:after, .arrowCta:before {
     content: "";
     display: block;
@@ -1001,10 +1019,6 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
     animation: bottom-arrow 2.2s ease infinite; }
   .arrowCta:before {
     animation: top-arrow 2.2s ease infinite; }
-
-.arrowCta--alt {
-  height: 20px;
-  width: 20px; }
 
 @keyframes bottom-arrow {
   0% {
