@@ -29,3 +29,16 @@ $.fn.isOnScreen = function(o){
 $(document).ready(function() {
    $("section").addClass(".active")
 });
+
+
+
+
+$.fn.toggleHTML = function(a, b) {
+    this.html(function(_, html){
+        return html === a  ? b : a;
+    })
+}
+
+$('#js-ctaMessage').click(function(){
+    $('.el').toggleHTML('Click to active scrollable', 'Scroll is active click to disable');
+});

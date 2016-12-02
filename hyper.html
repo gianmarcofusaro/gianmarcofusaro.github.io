@@ -13,8 +13,9 @@
 		<link href="/assets/css/application.min.css" rel="stylesheet" type="text/css" media="all"/>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 	</head>
-	<body id="js-main">
+	<body id="container">
 		<header class="header">
 	<div class="myLogo">
 		<a class="myLogo_link glitch" data-text="Gianmarco" href="index.html">
@@ -128,7 +129,7 @@
 		</ul>
 	</nav>
 </header>
-		<div id="aboutBar" class="">
+		<!-- <div id="aboutBar" class="">
 	<div class="closeIcon" id="closeBtn"> 
 		<img src="assets/icons/close-01.svg" alt="close">
 	</div>
@@ -143,7 +144,7 @@
 		<br></br>
 		<p>All the works presented are from 2016 Web Course Master. </p>
 	</div>
-</div>
+</div> -->
 		
 <main class="main_prj js-animation">
 	<header class="header_prj js-in-out-item">
@@ -195,7 +196,13 @@
 					</div>
 					<div class="closeMouse closeMouse-hyper" id="btnMouse"> <img src="icons/close-01.svg" alt="close"> </div>
 				</div> -->
-				<div class="ipad-content">
+				<div class="content--aux" id="js-scrollableTrigger"> 
+				<div class="ctaMessage ipad-ctaMessage" id="js-ctaMessage"> 
+					<span >toggle scrollable contents</span>
+				</div>
+				
+			</div>
+				<div class="ipad-content" id="js-scrollableItem">
 					<img class="section_picture-scrollInner" src="assets/img/hyper-scrollable-content.jpg" alt="ipad view">
 				</div>
 				<div class="ipad-frame">
@@ -219,11 +226,11 @@
 		<div class="del_container-right">
 			<div class="del_el">
 				<h6 class="del_label">DOWNLOAD</h6>
-				<p class="del_p"><a href="https://drive.google.com/open?id=0B8VQ5GFKtP3rSW96SEVTQmNCdFk"><img class="icon-del" src="assets/icons/download.svg" alt="_">PDF (156mb)</a></p>
+				<p class="del_p"><a href="https://drive.google.com/open?id=0B8VQ5GFKtP3rdDUwdFJNeU5SckU"><img class="icon-del" src="assets/icons/download.svg" alt="_">Exam PDF (1mb)</a></p>
 			</div>
 			<div class="del_el">
 				<h6 class="del_label">LINKS</h6>
-				<p class="del_p"><a href="#"><img class="icon-del" src="assets/icons/link.svg" alt="_">HTML prototype</a></p>
+				<p class="del_p"><a href="Hyper.web/index.html "><img class="icon-del" src="assets/icons/link.svg" alt="_">HTML prototype</a></p>
 				
 			</div>
 		</div>
@@ -265,7 +272,10 @@
 <script src="assets/js/isOnScreen.min.js"></script>
 <script src="assets/js/animationInOut.min.js"></script> 
 <script src="assets/js/readyFunc.min.js"></script> 
-<script src="assets/js/transformer.min.js"></script>
+<!-- <script src="assets/js/transformer.min.js"></script> -->
+<script src="assets/js/scrollableTrigger.min.js"></script>
+
+
 
 
 		</script>

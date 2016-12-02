@@ -13,8 +13,9 @@
 		<link href="/assets/css/application.min.css" rel="stylesheet" type="text/css" media="all"/>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 	</head>
-	<body id="js-main">
+	<body id="container">
 		<header class="header">
 	<div class="myLogo">
 		<a class="myLogo_link glitch" data-text="Gianmarco" href="index.html">
@@ -128,7 +129,7 @@
 		</ul>
 	</nav>
 </header>
-		<div id="aboutBar" class="">
+		<!-- <div id="aboutBar" class="">
 	<div class="closeIcon" id="closeBtn"> 
 		<img src="assets/icons/close-01.svg" alt="close">
 	</div>
@@ -143,7 +144,7 @@
 		<br></br>
 		<p>All the works presented are from 2016 Web Course Master. </p>
 	</div>
-</div>
+</div> -->
 		
 <main class="main_prj js-animation">
 	<header class="header_prj js-in-out-item">
@@ -161,38 +162,50 @@
 	</header>
 	
 	<section class="section" id="js-section">
+		
 		<article class="article article-full js-in-out-item">
+			
 			<div class="mac-wrapper">
-			   <div class="mouseWrapper-mac">
+				<div class="content--aux" id="js-scrollableTrigger"> 
+				<div class="ctaMessage " id="js-ctaMessage"> 
+					<span >toggle scrollable contents</span>
+				</div>
+				
+			</div>
+			   <!-- <div class="mouseWrapper-mac">
 					<div class="mouseFlag" id="mouseFlag">
 						<div class="mouse">
 							<div class="rail">
 								<div class="track"></div>
 							</div>
 						</div>
-						   <!--  <div class="closeMouse" id="btnMouse"> <img src="icons/close-02-01.svg" alt="close"> </div> -->
+						    <div class="closeMouse" id="btnMouse"> <img src="icons/close-02-01.svg" alt="close"> </div>
+					</div>
+				</div> -->
+					
+					<div class="mac-content" id="js-scrollableItem"> 
+							<img src="assets/img/rayban-scroll.jpg" alt="scrollable">
+					</div>
+					
+				
+					<div class="mac-frame">
+						<img src="assets/img/empty-mac-04.png" alt="scrollable mac">
+					</div>
+					<div class="section_paragraphContainer-full">
+						<h4 class="section_title">_ VISUAL REFIT</h4>
+						<div class="paragraph-aux">
+							<p class="section_paragraph-full">The contents are arranged vertically and grouped in sections, now with different font hierarchy. An assymetric layout based on a triple overlapped grid allows to have dynamic flow but still structured.</p>
+							<p class="section_paragraph-full">Overlapping texts and images is a technique from editorial field, in this case is used to give freshness to the page. </p>
+						</div>
 					</div>
 				</div>
-				<div class="mac-content"> 
-					<img src="assets/img/rayban-scroll.jpg" alt="scrollable">
-				</div>
-				<div class=" mac-frame">
-					<img src="assets/img/empty-mac-04.png" alt="scrollable mac">
-				</div>
-				<div class="section_paragraphContainer-full">
-					<h4 class="section_title">_ VISUAL REFIT</h4>
-					<div class="paragraph-aux">
-						<p class="section_paragraph-full">The contents are arranged vertically and grouped in sections, now with different font hierarchy. An assymetric layout based on a triple overlapped grid allows to have dynamic flow but still structured.</p>
-						<p class="section_paragraph-full">Overlapping texts and images is a technique from editorial field, in this case is used to give freshness to the page. </p>
-					</div>
-				</div>
-			</div>
+
 		</article>
 
 		<article class="article article-full js-in-out-item">
 			<div id="dBtn"></div>
 			<div class="d_wrapper">
-				<div class="d_container" id="dContainer">
+				<div class="d_container js-in-out-item js-outOff" id="dContainer">
 					<div class="d_layer d_layer_1"><img src="assets/img/a1.png"></div>
 					<div class="d_layer d_layer_2"><img src="assets/img/b2.png"></div>
 					<div class="d_layer d_layer_3"><img src="assets/img/c3.png"></div>
@@ -222,11 +235,11 @@
 		<div class="del_container-left">
 			<div class="del_el">
 				<h6 class="del_label">PROJECT</h6>
-				<p class="del_p">User experience</p>
+				<p class="del_p">eCommerce / Ux</p>
 			</div>
 			<div class="del_el">
 				<h6 class="del_label">DELIVERABLES</h6>
-				<p class="del_p">Visual Identity, Campaign, Product browsing</p>
+				<p class="del_p">Ux paths, mobile and desktop prototypes</p>
 			</div>
 			<div class="del_el">
 				<h6 class="del_label">TEAM</h6>
@@ -242,7 +255,8 @@
 			</div>
 			<div class="del_el">
 				<h6 class="del_label">LINKS</h6>
-				<p class="del_p"><a href="#"><img class="icon-del" src="assets/icons/link.svg" alt="_">Demo</a></p>
+				<p class="del_p"><a href="https://invis.io/XP7G15AYT" target="_blank"><img class="icon-del" src="assets/icons/link.svg" alt="_">Mobile prototype</a></p>
+				<p class="del_p"><a href="https://invis.io/DG7V6M4UF" target="_blank"><img class="icon-del" src="assets/icons/link.svg" alt="_">Desktop prototype</a></p>
 				
 			</div>
 		</div>
@@ -285,7 +299,10 @@
 <script src="assets/js/isOnScreen.min.js"></script>
 <script src="assets/js/animationInOut.min.js"></script> 
 <script src="assets/js/readyFunc.min.js"></script> 
-<script src="assets/js/transformer.min.js"></script>
+<!-- <script src="assets/js/transformer.min.js"></script> -->
+<script src="assets/js/scrollableTrigger.min.js"></script>
+
+
 
 
 		</script>

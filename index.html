@@ -13,6 +13,9 @@
 		<link href="/assets/css/application.min.css" rel="stylesheet" type="text/css" media="all"/>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+
 	</head>
 	<body>
 		<header class="header">
@@ -128,7 +131,7 @@
 		</ul>
 	</nav>
 </header>
-		<div id="aboutBar" class="">
+	<!-- 	<div id="aboutBar" class="">
 	<div class="closeIcon" id="closeBtn"> 
 		<img src="assets/icons/close-01.svg" alt="close">
 	</div>
@@ -143,16 +146,16 @@
 		<br></br>
 		<p>All the works presented are from 2016 Web Course Master. </p>
 	</div>
-</div>
+</div> -->
 		
-<main class="main__wrapper js-animation" >
+<main class="main__wrapper js-animation" id="makeMeScrollable">
 	<ul class="main_container" id="js-mainContainer">
 		<li class="main_preview js-in-out-item" id="start">
 			<a href="wally.html" class="preview_link">
 				<div class="main_previewAux">
 					<img class="preview_pic" src="assets/img/wally_home_preview.jpg" alt= "test_pic" />
 					<header class="preview_header">
-						<span class="preview_label">art Direction</span>
+						<span class="preview_label">art Direction I</span>
 						<h3 class="preview_title">Wally</h3>
 					</header>
 				</div>
@@ -188,7 +191,7 @@
 				<div class="main_previewAux">
 					<img class="preview_pic" src="assets/img/garage-home-preview.jpg" alt= "test_pic" />
 					<header class="preview_header">
-						<span class="preview_label">rebranding</span>
+						<span class="preview_label">art Direction II</span>
 						<h3 class="preview_title">Garage Italia Customs</h3>
 					</header>
 				</div>
@@ -220,14 +223,13 @@
 		</li>
 	</ul>
 </main>
-<div class="ply__projects_scroll--fix" id="js-arrows">
 
-	<a class="arrow__link">
-		<div class="interactionPrompt interactionPrompt--alt" style="visibility: inherit; opacity: 1;">
-			<div class="arrowCta arrowCta--alt js-scroll" id='downClick'></div>
-		</div>
-	</a>
+<div class="interactionPrompt interactionPrompt--alt js-arrowR">
+	<div class="arrowCta arrowCta--alt js-scroll" id='downClick'></div>
 </div>
+
+
+<!-- </div> -->
 
 		<footer class="footer_foot">
 	<ul class="foot_ulItem">
@@ -251,6 +253,8 @@
 <!-- <script src="assets/js/h-glitch.min.js"></script>  -->
 <script src="assets/js/isOnScreen.min.js"></script>
 <script src="assets/js/animationInOut.min.js"></script> 
-<script src="assets/js/arrows.min.js"></script>
+<!-- <script src="assets/js/arrows.min.js"></script> -->
+<script src="assets/js/scroller.min.js"></script> 
+
 	</body>
 </html>

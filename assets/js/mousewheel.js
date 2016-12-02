@@ -80,15 +80,16 @@ if ($(window).width() > 768) {
 
 
 var scrolled = 0;
-$(document).ready(function() {
 
-    $("#downClick").on("click", function() {
-        scrolled = scrolled + 300;
-        console.log("#downClikc");
+// $(document).ready(function() {
 
-        $(".mainContainer").animate({
-            scrollDown: scrolled
-        });
-        console.log(".mainContainer");
-    });
-});
+//     $("#js-arrowR").on("click", function() {
+//         scrolled = scrolled + 300;
+//         console.log("#downClikc");
+
+//         $(".mainContainer").animate({
+//             scrollDown: scrolled
+//         });
+//         console.log(".mainContainer");
+//     });
+// });

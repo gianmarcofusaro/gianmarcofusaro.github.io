@@ -116,7 +116,7 @@ body {
 body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-full, .ply__preview_year, .preview_label, .header_prjBrief {
   font-family: "Libre+Franklin", sans-serif; }
 
-.paragraph_caption {
+.paragraph_caption, .ctaMessage {
   font-family: "Libre+Franklin", sans-serif;
   font-weight: 900; }
 
@@ -411,7 +411,7 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   transform-origin: 50% 50%; }
   .header_prj.animation-in {
     opacity: 1;
-    transform: translateY(-10%) rotateX(0deg); }
+    transform: translateY(-10%); }
   @media (min-width: 1024px) {
     .header_prj {
       display: flex;
@@ -421,7 +421,7 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       align-content: center; }
       .header_prj.animation-in {
         opacity: 1;
-        transform: translateY(0) rotateX(0deg); } }
+        transform: translateY(0); } }
 
 .header_prjAux--left {
   display: flex;
@@ -470,12 +470,12 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   margin-bottom: 15vh;
   transition: all 0.7s ease 0.2s;
   opacity: 0.7;
-  transform: translateY(10px) rotateX(8deg);
+  transform: translateY(0px);
   perspective: 500px;
   transform-origin: 50% 50%; }
   .article.animation-in {
     opacity: 1;
-    transform: translateY(0) rotateX(0deg); }
+    transform: translateY(-25px); }
   @media (min-width: 768px) {
     .article {
       margin-bottom: 20vh;
@@ -740,8 +740,11 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   width: 87.17%;
   max-height: 420px;
   margin: 48px 25px;
-  overflow: scroll;
+  overflow: hidden;
   z-index: 400; }
+  @media (min-width: 768px) {
+    .ipad-content.active {
+      overflow-y: scroll; } }
 
 .section_picture-scrollInner {
   width: 100%; }
@@ -757,14 +760,66 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   position: absolute;
   width: 80%;
   height: 44vw;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   margin: 5% 10%; }
-  .mac-content img {
-    width: 100%; }
   @media (min-width: 768px) {
     .mac-content {
-      height: 28.2vw; } }
+      height: 28.2vw; }
+      .mac-content.active {
+        overflow-y: scroll; } }
+  .mac-content img {
+    width: 100%; }
+
+.content--aux {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: transparent;
+  transition: opacity 0.1s ease-in-out; }
+  .content--aux.active {
+    transition: all 0.1s ease-in-out;
+    opacity: 1; }
+  @media (min-width: 0) and (max-width: 768px) {
+    .content--aux {
+      display: none; } }
+
+.ctaMessage {
+  position: absolute;
+  left: 94%;
+  top: 10%;
+  display: flex;
+  width: 100px;
+  height: auto;
+  text-align: right;
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: #606060;
+  opacity: 1;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out; }
+  .ctaMessage.ipad-ctaMessage {
+    left: 100%; }
+  .ctaMessage:hover {
+    background-color: #909090;
+    color: #ffffff; }
+  .ctaMessage.active {
+    transition: all 0.3s ease-in-out;
+    background-color: #ffd700;
+    color: #232323; }
+    .ctaMessage.active:hover {
+      background-color: #909090;
+      color: #ffd700; }
 
 .mac-frame img {
   width: 100%; }
@@ -957,28 +1012,14 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       min-width: 70px;
       text-align: center; } }
 
-.ply__projects_scroll--fix {
-  display: none;
-  position: relative;
-  height: auto;
-  width: 100%;
-  text-align: center; }
-  @media (min-width: 768px) {
-    .ply__projects_scroll--fix {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      height: 70px;
-      width: 100%; } }
-
 .interactionPrompt {
-  position: absolute;
+  position: fixed;
   display: block;
   width: 60px;
   height: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   cursor: pointer; }
 
@@ -987,16 +1028,22 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   height: 20px;
   width: 20px;
   padding: 10px;
+  top: 30%;
+  left: 30%;
   position: relative;
   overflow: visible;
   cursor: pointer;
   border: transparent;
   background-color: transparent;
-  z-index: 999;
+  z-index: 99;
   transform: scale(0.65) rotate(-45deg);
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  opacity: 1; }
   .arrowCta.active {
     transform: scale(0.65) rotate(135deg);
+    transition: transform 0.2s ease-in-out; }
+  .arrowCta.hidden {
+    opacity: 0;
     transition: all 0.2s ease-in-out; }
   .arrowCta:after, .arrowCta:before {
     content: "";
@@ -1365,30 +1412,21 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   display: block;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  transition: all 1800ms ease;
+  transition: all 1800ms ease-in-out;
   width: 70%;
   height: 70%;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 71%; }
-
-.d_activeContainer {
-  display: block;
-  transform-style: preserve-3d;
-  transition: transform 1800ms;
-  transform-origin: 0% 75%;
-  width: 70%;
-  height: 70%;
-  text-align: center;
-  margin: 0 auto;
-  padding-bottom: 71%;
-  transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translateX(5%); }
-  @media (min-width: 768px) {
-    .d_activeContainer {
-      transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(15%, -25%); } }
-  @media (min-width: 1024px) {
-    .d_activeContainer {
-      transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(-5%, -35%) scale(1.5); } }
+  .d_container.animation-in {
+    transition: all 1800ms ease-in-out;
+    transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translateX(5%); }
+    @media (min-width: 768px) {
+      .d_container.animation-in {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(15%, -25%); } }
+    @media (min-width: 1024px) {
+      .d_container.animation-in {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(-5%, -35%) scale(1.5); } }
 
 .d_layer {
   position: absolute;
