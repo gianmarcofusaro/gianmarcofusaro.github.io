@@ -218,7 +218,8 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
 .section_title--small {
   line-height: 2.5em;
   transition: all 0.2s ease-in-out;
-  font-size: 1rem; }
+  font-size: 1rem; 
+  white-space: nowrap;}
   @media (min-width: 768px) {
     .section_title--small {
       font-size: 1.35rem; } }
