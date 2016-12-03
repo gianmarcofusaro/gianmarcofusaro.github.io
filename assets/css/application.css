@@ -464,6 +464,9 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   padding: 20px 0 20px 0;
   font-size: initial; }
 
+.section_title {
+  white-space: nowrap; }
+
 .article {
   position: relative;
   width: 100%;
@@ -484,25 +487,31 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
 .article-fat {
   position: relative;
   width: 100%;
-  margin-bottom: 15vh; }
+  *zoom: 1; }
+  .article-fat:before, .article-fat:after {
+    content: " ";
+    display: table; }
+  .article-fat:after {
+    clear: both; }
   .article-fat img {
-    display: block;
-    width: 60%;
+    display: inline-block;
+    width: 40vw;
     position: relative;
     margin: 0 auto;
-    height: 30%;
-    margin-bottom: 50px; }
+    height: auto;
+    margin-bottom: 20px; }
     .article-fat img:nth-child(odd) {
       float: left; }
     .article-fat img:nth-child(even) {
       float: right; }
+  .article-fat:last-child {
+    position: relative;
+    display: block; }
   @media (min-width: 768px) {
     .article-fat {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      margin-bottom: 20vh;
-      padding: 0 20vw; }
+      justify-content: space-between; }
       .article-fat img {
         width: 30%;
         height: 30%; } }
@@ -1426,7 +1435,7 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
         transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(15%, -25%); } }
     @media (min-width: 1024px) {
       .d_container.animation-in {
-        transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(-5%, -35%) scale(1.5); } }
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(-15deg) translate(0%, -35%) scale(1.2); } }
 
 .d_layer {
   position: absolute;
@@ -1435,28 +1444,20 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   right: 0;
   left: 0; }
 
-.d_container .d_layer_1 img,
-.d_container .d_layer_2 img,
-.d_container .d_layer_3 img {
+.d_container .d_layer_1 img {
   transform: translateZ(0px);
   border: 1px solid rgba(128, 128, 128, 0.1);
+  opacity: 1;
   transition: transform 1800ms;
   width: 100%; }
-
-.d_activeContainer .d_layer_1 img {
-  transform: translateZ(0px) scale(1);
+.d_container .d_layer_2 img {
+  transform: translateZ(50px);
   border: 1px solid rgba(128, 128, 128, 0.1);
   opacity: 1;
   transition: transform 1800ms;
   width: 100%; }
-.d_activeContainer .d_layer_2 img {
-  transform: translateZ(50px) scale(1);
-  border: 1px solid rgba(128, 128, 128, 0.1);
-  opacity: 1;
-  transition: transform 1800ms;
-  width: 100%; }
-.d_activeContainer .d_layer_3 img {
-  transform: translateZ(100px) scale(1);
+.d_container .d_layer_3 img {
+  transform: translateZ(100px);
   border: 1px solid rgba(128, 128, 128, 0.1);
   transition: transform 1800ms;
   width: 100%; }
