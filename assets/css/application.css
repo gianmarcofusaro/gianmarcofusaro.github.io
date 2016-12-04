@@ -865,12 +865,13 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       font-size: 20px; } }
 
 .column {
-  width: 50%;
+  width: 75%;
   height: 100%;
   padding-top: 100px;
   padding-bottom: 20px; }
   @media (min-width: 768px) {
     .column {
+      width: 50%;
       padding: 0 auto; } }
 
 .ply__wrapper {
