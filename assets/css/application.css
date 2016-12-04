@@ -743,6 +743,10 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
   width: 100%;
   z-index: 100;
   overflow: hidden; }
+  .ipad-frame img {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
 
 .ipad-content {
   position: absolute;
@@ -862,7 +866,12 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
 
 .column {
   width: 50%;
-  height: 100%; }
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .column {
+      padding: 0 auto; } }
 
 .ply__wrapper {
   position: relative;
@@ -1022,15 +1031,18 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       text-align: center; } }
 
 .interactionPrompt {
-  position: fixed;
-  display: block;
-  width: 60px;
-  height: 60px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  cursor: pointer; }
+  display: none; }
+  @media (min-width: 768px) {
+    .interactionPrompt {
+      position: fixed;
+      display: block;
+      width: 60px;
+      height: 60px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      cursor: pointer; } }
 
 .arrowCta {
   display: inline-block;
