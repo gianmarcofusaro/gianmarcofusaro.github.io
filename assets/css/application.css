@@ -1041,9 +1041,19 @@ body, .header_prjLabel, .ply__preview_label, .brief_caption, .section_paragraph-
       height: 60px;
       bottom: 0;
       left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      cursor: pointer; } }
+      transform: translateX(-50%) rotate(90deg);
+      z-index: 999; }
+      .interactionPrompt:before {
+        content: "scroll down";
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: auto;
+        transform: translateX(-40%) translateY(346%) rotate(-90deg);
+        white-space: nowrap; } }
 
 .arrowCta {
   display: inline-block;
