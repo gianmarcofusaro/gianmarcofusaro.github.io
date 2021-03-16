@@ -455,17 +455,13 @@ body,
   }
 }
 
-.main__wrapper {
-  position: absolute;
-  height: 100%;
-  width: auto;
-}
 
 .main_container {
   display: block;
   position: relative;
   width: 100%;
   margin-top: 80px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -479,6 +475,12 @@ body,
     align-items: center;
     margin-top: 0px;
     padding: 0 20px;
+  }
+
+  .main__wrapper {
+    position: absolute;
+    height: 100%;
+    width: auto;
   }
 }
 
