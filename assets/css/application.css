@@ -2503,6 +2503,6 @@ footer .upper {
 footer .lower {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
+  margin-top: 8px;
+  justify-content: flex-end;
 }
