@@ -2482,11 +2482,14 @@ svg {
   }
 }
 
-@import"scripts/about.js";
-
 .copyright {
   font-family: "Libre+Franklin", sans-serif;
-  font-size: 12px;
+  font-size: 9px;
+  font-weight: 900;
+  color: #888585;
+  border: 1px solid;
+  padding: 3px;
+  line-height: .8;
 }
 
 footer .upper {
