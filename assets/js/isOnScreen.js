@@ -31,8 +31,6 @@ $(document).ready(function() {
 });
 
 
-
-
 $.fn.toggleHTML = function(a, b) {
     this.html(function(_, html){
         return html === a  ? b : a;
