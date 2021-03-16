@@ -2503,7 +2503,7 @@ svg {
   font-size: 12px;
 }
 
-footer.upper {
+footer .upper {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -2511,7 +2511,7 @@ footer.upper {
 }
 
 
-footer.lower {
+footer .lower {
   width: 100%;
   display: flex;
   justify-content: space-between;
