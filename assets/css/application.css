@@ -1807,3 +1807,8 @@ svg {
   to {
     transform: rotate(360deg); } }
 @import"scripts/about.js";
+
+.copyright {
+  font-family: "Libre+Franklin", sans-serif;
+  font-size: 12px;
+}
