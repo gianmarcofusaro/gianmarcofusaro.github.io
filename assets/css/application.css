@@ -1885,29 +1885,15 @@ body,
   margin-left: 20px;
 }
 
-.footer_foot {
-  display: flex;
-  position: relative;
-  bottom: 0;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100vw;
-  margin-top: 50px;
-  padding: 0 20px;
-  bottom: 10px;
-  display: none;
-}
-
 @media (min-width: 768px) {
   .footer_foot {
     display: flex;
     position: fixed;
-    justify-content: space-between;
-    align-items: flex-end;
     width: 100vw;
-    height: 50px;
-    padding: 0 35px;
-    margin: 0;
+    margin-top: 50px;
+    padding: 0 20px;
+    bottom: 10px;
+    flex-direction: column;
   }
 }
 
